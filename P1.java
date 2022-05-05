@@ -2,15 +2,15 @@ import java.util.*;
 class Tyro {
     static int fun1(int arr[], int n){
         Arrays.sort(arr); 
-        int max_count = 1, res = arr[0];
-        int curr_count = 1;
+        int m_c = 1, res = arr[0];
+        int c_c = 1;
         for (int i = 1; i < n; i++) {
             if (arr[i] == arr[i - 1])
-                curr_count++;
+                c_c++;
             else
-                curr_count = 1;
-            if (curr_count > max_count) {
-                max_count = curr_count;
+                c_c = 1;
+            if (c_c > m_c) {
+                m_c = c_c;
                 res = arr[i - 1];
             }
         }
